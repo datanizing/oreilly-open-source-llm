@@ -127,7 +127,9 @@ distro==1.9.0
 dnspython==2.8.0
     # via email-validator
 einops==0.8.1
-    # via vllm
+    # via
+    #   flash-attn
+    #   vllm
 email-validator==2.3.0
     # via
     #   fastapi
@@ -158,6 +160,8 @@ filelock==3.19.1
     #   torch
     #   transformers
     #   vllm
+flash-attn==2.8.2
+    # via ollm-env (pyproject.toml)
 fqdn==1.5.1
     # via jsonschema
 frozendict==2.4.6
@@ -841,6 +845,7 @@ torch==2.8.0
     #   autoawq
     #   compressed-tensors
     #   exllamav2
+    #   flash-attn
     #   optimum
     #   sentence-transformers
     #   torchaudio
