@@ -1,5 +1,11 @@
 # Day 1 for LLM Bootcamp
 
+On day 1, we will focus on *encoder models*, often also
+called BERT-like models. These models can be used for
+predicting missing words, text classification, and
+semantic retrieval. All these use cases will be covered
+on day 1.
+
 ## Presentation
 The [slides](<2025-11-19-LLM-3-1.pdf>) contain additional
 background and theroretical information.
