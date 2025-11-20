@@ -37,3 +37,27 @@ For this, a good starting point is [LM Studio](https://lmstudio.ai/) which is av
 An alternative (but also not completely open) is [ollama](https://ollama.com/).
 
 If you want to run free software, [llama.cpp](https://github.com/ggml-org/llama.cpp) is recommended. It is a very active project with multiple releases per day and supports many current models. `llama.cpp` can also run as server and is compatible to the OpenAI API.
+
+### Creating your own GGUFs
+
+The easiest way is to download GGUFs, which are widely available on [Hugging Face](https://huggingface.co).
+
+If a GGUF is not available, you can also [create it there](https://huggingface.co/spaces/ggml-org/gguf-my-repo).
+
+Using llama.cpp, you can convert Hugging Face repositories (download first via `huggingface-cli download --local-dir Qwen-8B Qwen/Qwen3-8B`) to GGUF:
+
+```bash
+python convert_hf_to_gguf.py --outfile Qwen3-8B.gguf Qwen3-8B
+```
+
+Afterwards, you can quantize them:
+
+```bash
+$ build/bin/llama-quantize Qwen3-8B.gguf Qwen3-8B-Q4_K_M.gguf q4_k_m
+```
+
+Finally, run a `llama-server` to access the frontend:
+
+```bash
+$ build/bin/llama-server -m Qwen3-8B-Q4_K_M.gguf --port 8080
+```
