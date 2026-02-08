@@ -61,3 +61,12 @@ Finally, run a `llama-server` to access the frontend:
 ```bash
 $ build/bin/llama-server -m Qwen3-8B-Q4_K_M.gguf --port 8080
 ```
+
+## Trying models without local hardware
+
+On [Hugging Face](https://huggingface.co), some models
+are available for inference.
+
+You can also try [OpenRouter](https://openrouter.ai/models),
+some of the models are free, for some you have to pay (very
+little). Many new models are available there.
