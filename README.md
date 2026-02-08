@@ -14,7 +14,6 @@ If possible, work with [uv](https://astral.sh/uv/). Clone the repository and run
 Create an venv or conda environment and install the following packages:
 
 * accelerate
-* autoawq
 * bitsandbytes
 * device-smi
 * exllamav2
